@@ -2,12 +2,12 @@ name: Fly Deploy
 on:
 push:
 branches:
-  - jgenso-issue-2-github-action
+  - main
 env:
 FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
 jobs:
 deploy:
-name: Deploy Dems Llama
+name: Deploy Phoenix test
 runs-on: ubuntu-latest
 steps:
   - uses: actions/checkout@v3
