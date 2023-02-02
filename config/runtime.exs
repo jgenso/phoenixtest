@@ -22,10 +22,12 @@ end
 
 secret1 = System.get_env("SECRET1") || raise "MISSING SECRET1 ENV VAR"
 secret2 = System.get_env("SECRET2") || raise "MISSING SECRET2 ENV VAR"
+secret3 = System.get_env("SECRET3") || raise "MISSING SECRET3 ENV VAR"
 
 config :phoenixtest, Phoenixtest.Secrets,
   secret1: secret1,
-  secret2: secret2
+  secret2: secret2,
+  secret3: secret3
 
 if config_env() == :prod do
   database_url =
